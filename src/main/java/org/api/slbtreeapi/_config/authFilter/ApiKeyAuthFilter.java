@@ -14,8 +14,8 @@ import java.io.IOException;
 public class ApiKeyAuthFilter extends OncePerRequestFilter {
 
     // Inject API key from properties
-    @Value("${api.key}")
-    private String apiKey;
+    /*@Value("${api.key}")*/
+    private String apiKey = "k";
 
     // Header name
     private static final String HEADER_NAME = "X-API-KEY";
