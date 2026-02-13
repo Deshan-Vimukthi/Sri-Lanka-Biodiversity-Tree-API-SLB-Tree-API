@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: slb-tree-api
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${DB_HOST:localhost}:3306/${DATABASE_NAME:slb_tree_api}
+    username: ${DATABASE_USERNAME:root}
+    password: ${DATABASE_PASSWORD:}
+
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      timeout: 60000
+
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+
+api:
+  rate-limit: 100
+
+jwt:
+  secret: ${JWT_SECRET:devSecretKeyForJWT123}
+  expiration: 3600000

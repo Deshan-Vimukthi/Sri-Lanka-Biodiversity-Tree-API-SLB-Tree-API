@@ -1,0 +1,13 @@
+nstead of copying .env.dev, you can set environment variables on the server shell:
+
+export MYSQL_ROOT_PASSWORD=rootpassword2
+export MYSQL_DATABASE=mydb
+export MYSQL_USER=springuser2
+export MYSQL_PASSWORD=springpass2
+export REDIS_PORT=6379
+export SPRING_APP_PORT=8080
+
+
+Then run Docker Compose without specifying a file:
+
+docker-compose up -d

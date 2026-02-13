@@ -8,6 +8,7 @@ public class SlbTreeApiApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SlbTreeApiApplication.class, args);
+        System.out.println("Application Started");
     }
 
 }
